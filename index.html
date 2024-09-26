@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#pane1-container, #pane2-container, #pane3-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 300px; /* Set a fixed width to the panes */
+}
+
+#pane1-container {
+  top: 10px;
+}
+
+#pane2-container {
+  top: 170px; /* Adjust the top value to create vertical space between the panes */
+}
+
+#pane3-container {
+  top: 330px;
+}
+
+		</style>
+		<meta charset="utf-8">
+		<title>Starter</title>
+        
+		<script type="module" crossorigin src="/SolarSystem/bundle.js"></script>
+		<link rel="stylesheet" href="/SolarSystem/assets/index-efddde6b.css">
+	</head>
+	<body>
+		<div id="pane1-container"></div>
+<div id="pane2-container"></div>
+<div id="pane3-container"></div>
+        <div id="canvas" class="threejs"></canvas>
+		<canvas class="threejs"></canvas>
+        
+	</body>
+</html> 
