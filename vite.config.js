@@ -1,7 +1,6 @@
 export default {
     root: 'src/',
     publicDir: '../static/',
-    base: '/SolarSystem/',
     build: {
         outDir: '../dist', // Output directory for the built files
         rollupOptions: {
