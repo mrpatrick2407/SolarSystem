@@ -11,17 +11,19 @@ const cubeMaptexture = new THREE.CubeTexture()
 const scene = new THREE.Scene();
 const axis=new THREE.AxesHelper(70)
 // initialize the loader 
+const image =import.meta.env.BASE_URL + 'textures/solar/';
+console.log(image);
 const textureLoader = new THREE.TextureLoader()
-const sunTexture=textureLoader.load('./8k_sun.jpg')
-const moonTexture=textureLoader.load('./8k_moon.jpg')
-const earthTexture=textureLoader.load('./8k_earth_daymap.jpg')
-const jupiterTexture=textureLoader.load('./8k_jupiter.jpg')
-const marsTexture=textureLoader.load('./8k_mars.jpg')
-const mercuryTexture=textureLoader.load('./8k_mercury.jpg')
-const saturnTexture=textureLoader.load('./8k_saturn.jpg')
-const milkywayTexture=textureLoader.load('./8k_stars_milky_way.jpg')
-const venusSurfaceTexture=textureLoader.load('./8k_venus_surface.jpg')
-const venusAtmosphereTexture=textureLoader.load('./4k_venus_atmosphere.jpg')
+const sunTexture=textureLoader.load(image+'8k_sun.jpg')
+const moonTexture=textureLoader.load(image+'8k_moon.jpg')
+const earthTexture=textureLoader.load(image+'8k_earth_daymap.jpg')
+const jupiterTexture=textureLoader.load(image+'8k_jupiter.jpg')
+const marsTexture=textureLoader.load(image+'8k_mars.jpg')
+const mercuryTexture=textureLoader.load(image+'8k_mercury.jpg')
+const saturnTexture=textureLoader.load(image+'8k_saturn.jpg')
+const milkywayTexture=textureLoader.load(image+'8k_stars_milky_way.jpg')
+const venusSurfaceTexture=textureLoader.load(image+'8k_venus_surface.jpg')
+const venusAtmosphereTexture=textureLoader.load(image+'4k_venus_atmosphere.jpg')
 //add materials
 const mercuryMaterial=new THREE.MeshStandardMaterial({map:mercuryTexture})
 const moonMaterial=new THREE.MeshStandardMaterial({map:moonTexture})
@@ -44,7 +46,7 @@ const sunMaterial = new THREE.MeshBasicMaterial({
 })
 const Sun= new THREE.Mesh(sphereGeometry, sunMaterial);
 Sun.scale.setScalar(10)
-const cubemap=new THREE.CubeTextureLoader().setPath('./Standard-Cube-Map\\').load([
+const cubemap=new THREE.CubeTextureLoader().setPath(image+'Standard-Cube-Map\\').load([
   'px.png',
   'nx.png',
   'py.png',
