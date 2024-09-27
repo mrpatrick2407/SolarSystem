@@ -1,6 +1,5 @@
 export default {
     root: 'src/',
-    publicDir: '../static/',
     build: {
         outDir: '../dist', // Output directory for the built files
         rollupOptions: {
