@@ -1,6 +1,6 @@
 export default {
     root: 'src/',
-    base:'/SolarSytem/',
+    base:'/SolarSystem/',
     build: {
         outDir: '../dist', // Output directory for the built files
         rollupOptions: {
